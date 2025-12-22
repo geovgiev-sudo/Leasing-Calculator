@@ -11,6 +11,9 @@ total_sum_interest = total_sum + sum_interest
 monthly_payment = total_sum_interest / period_months
 sum_interest_monthly = percentage_interest_rate / 100 * monthly_payment
 print(f'Your monthly payment will be {monthly_payment:.2f} {currency}.')
+print(f'Your monthly interest will be {sum_interest_monthly:.2f} {currency}.')
+print(f'Your total interest will be {sum_interest:.2f} {currency}.')
+print(f'Your total sum owed will be {total_sum_interest:.2f} {currency}.')
 
 remaining_money_owed = 0
 months_paid = 0
