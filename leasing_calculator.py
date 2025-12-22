@@ -25,11 +25,11 @@ for i in range(period_months):
         print(f'Great! You have chosen to finish prematurely! You owe us {remaining_money_owed} {currency}.')
         premature_fee = 69
         premature_fee_month = (premature_fee / 100 * monthly_payment) + monthly_payment
-        premature_total = (premature_fee / 100 * remaining_money_owed) + remaining_money_owed
+        premature_total = premature_fee_month * months_left
         print(f'However, there is a fee for finishing prematurely.')
-        print(f'You will need to pay an additional fee of {premature_fee}% per monthly payment.')
-        print(f'Your monthly payment will be {premature_fee_month}')
-        print(f'Your total will be {premature_total:.2f}.')
+        print(f'You will need to pay an additional fee of {premature_fee:.2f}% per monthly payment.')
+        print(f'Your monthly payment will be {premature_fee_month:.2f} {currency}.')
+        print(f'Your total will be {premature_total:.2f} {currency}.')
         print(f'Are you sure you want to continue?')
         confirmation = input()
         if confirmation == 'Yes':
