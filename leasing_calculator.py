@@ -6,8 +6,10 @@ print(f'Please enter total sum')
 total_sum = float(input())
 print(f'Please enter months')
 period_months = int(input())
-total_sum_interest = total_sum + ((percentage_interest_rate / 100) * total_sum)
+sum_interest = percentage_interest_rate / 100 * total_sum
+total_sum_interest = total_sum + sum_interest
 monthly_payment = total_sum_interest / period_months
+sum_interest_monthly = percentage_interest_rate / 100 * monthly_payment
 print(f'Your monthly payment will be {monthly_payment:.2f} {currency}.')
 
 remaining_money_owed = 0
