@@ -38,7 +38,7 @@ monthly_payment = principal * monthly_interest_rate * (1 + monthly_interest_rate
 
 # Заглавие
 print("\n" + BOLD + BLUE + "=" * 78 + RESET)
-print(f"{BOLD}{CYAN}{'Месец':<8} | {'Вноска':<12} | {'Лихва':<12} | {'Главница':<12} | {'Остатък':<12} | {'Бележка':<12}{RESET}")
+print(f"{BOLD}{CYAN}{'Месец':<8} | {'Вноска':<12} | {'Главница':<12} | {'Лихва':<12} | {'Остатък':<12} | {'Бележка':<12}{RESET}")
 print(BLUE + "-" * 78 + RESET)
 
 remaining_balance = principal
@@ -65,15 +65,17 @@ for month in range(1, months + 1):
 
     # Печат
     print(
-        f"{YELLOW}{month:<8}{RESET} | "
-        f"{GREEN}{monthly_payment:<12.2f}{RESET} | "
-        f"{MAGENTA}{interest:<12.2f}{RESET} | "
-        f"{CYAN}{principal_paid:<12.2f}{RESET} | "
-        f"{BLUE}{remaining_balance:<12.2f}{RESET} | "
-        f"{note:<12}"
-    )
+    f"{YELLOW}{month:<8}{RESET} | "
+    f"{GREEN}{monthly_payment:<12.2f}{RESET} | "
+    f"{CYAN}{principal_paid:<12.2f}{RESET} | "
+    f"{MAGENTA}{interest:<12.2f}{RESET} | "
+    f"{BLUE}{remaining_balance:<12.2f}{RESET} | "
+    f"{note:<12}"
+)
+
 
     if remaining_balance == 0:
         break
 
 print(BOLD + BLUE + "=" * 78 + RESET)
+
